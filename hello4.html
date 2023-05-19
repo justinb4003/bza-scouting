@@ -1,0 +1,22 @@
+<html>
+<script>
+    function sayHello() {
+        alert('hello!');
+    }
+
+    function addButton() {
+        let elem = document.getElementById('more-buttons');
+        console.log('elem', elem);
+        let btn = document.createElement('button');
+        btn.innerText = 'Bonk';
+        elem.appendChild(btn);
+    }
+</script>
+<body>
+    <button onclick="sayHello();">Hello!</button>
+    <br />
+    <button onclick="addButton();">Add useless button</button>
+    <div id="more-buttons">
+    </div>
+</body>
+<html>

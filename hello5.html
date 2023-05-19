@@ -1,0 +1,28 @@
+<html>
+<script>
+    function sayHello() {
+        alert('hello!');
+    }
+
+    function bonk() {
+        alert('bonk!');
+    }
+
+    function addButton() {
+        let elem = document.getElementById('more-buttons');
+        console.log('elem', elem);
+        let btn = document.createElement('button');
+        btn.innerText = 'Bonk';
+        btn.onclick = bonk;
+        elem.appendChild(btn);
+    }
+</script>
+<body>
+    <button onclick="saySomething();">Speak!</button>
+    <br />
+    <button onclick="addButton();">Add useless button</button>
+    <div id="more-buttons">
+    </div>
+</body>
+</html>
+

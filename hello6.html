@@ -1,0 +1,45 @@
+<html>
+<style>
+    button {
+        height: 5em;
+        margin: 1em;
+    }
+
+    .bonk-button {
+        height: 2em;
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+
+    .button-container {
+        width: 30em;
+    }
+</style>
+<script>
+    function sayHello() {
+        alert('hello!');
+    }
+
+    function bonk() {
+        alert('bonk!');
+    }
+
+    function addButton() {
+        let elem = document.getElementById('more-buttons');
+        console.log('elem', elem);
+        let btn = document.createElement('button');
+        btn.innerText = 'Bonk';
+        btn.onclick = bonk;
+        btn.setAttribute('class', 'bonk-button');
+        elem.appendChild(btn);
+    }
+</script>
+<body>
+    <button onclick="saySomething();">Speak!</button>
+    <br />
+    <button onclick="addButton();">Add useless button</button>
+    <div id="more-buttons" class="button-container">
+    </div>
+</body>
+</html>
+
